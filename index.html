@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quality Under Pressure — A Teaching Simulation for "The Infected Margin"</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="brand">XLRI &nbsp;·&nbsp; Case OM-HC-2025-04 &nbsp;·&nbsp; Teaching Supplement</div>
+      <h1>Quality Under Pressure</h1>
+      <div class="sub">A decision simulation companion to <em>The Infected Margin</em></div>
+    </div>
+    <button id="instrToggle" class="toggle" onclick="toggleInstructor()" title="Faculty only — password in the teaching note, TN 7.5">Instructor view: off</button>
+  </header>
+  <div id="app"></div>
+  <div class="footer">
+    Self-contained teaching simulation · runs offline · no login or network required. No medical knowledge needed to play.
+    Companion to the case and teaching note; optional and ungraded. The score is a teaching device to make trade-offs clear, not a real-world prediction.
+  </div>
+</div>
+
+<div class="lockmask" id="lockMask" role="dialog" aria-modal="true" aria-labelledby="lockTitle">
+  <div class="lockbox">
+    <h3 id="lockTitle">Instructor view</h3>
+    <p>This view reveals the hidden metrics, the concept each option teaches, and the facilitation guide. It is intended for faculty teaching the case. The password is given in the teaching note at TN&nbsp;7.5.</p>
+    <input type="password" id="lockPass" placeholder="Password" autocomplete="off" spellcheck="false">
+    <div class="lockerr" id="lockErr">That password is not correct.</div>
+    <div class="lockrow">
+      <button type="button" onclick="closeLock()">Cancel</button>
+      <button type="button" class="pri" onclick="submitLock()">Unlock</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/simulation.js"></script>
+</body>
+</html>
